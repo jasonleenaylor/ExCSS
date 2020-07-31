@@ -34,6 +34,7 @@
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\ExCSS\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -190,7 +191,7 @@
     <PropertyGroup>
       <ExCSSSemVer>$(ExCSSAssemblyVersion.SubString(0, $(ExCSSAssemblyVersion.LastIndexOf('.'))))</ExCSSSemVer>
     </PropertyGroup>
-    <Exec Command="$(SolutionDir).nuget\nuget pack $(SolutionDir)\NuSpec\ExCSS.nuspec -Version $(ExCSSSemVer) -o $(SolutionDir)\NuSpec" />
-    <Message Text="$(SolutionDir).nuget\nuget pack $(SolutionDir)\NuSpec\ExCSS.nuspec -Version $(ExCSSSemVer)" Importance="high" />
+    <Exec Command="$(SolutionDir).nuget\nuget pack $(SolutionDir)\NuSpec\SIL.ExCSS.nuspec -Version $(ExCSSSemVer) -OutputDirectory $(SolutionDir)\NuSpec" />
+    <Message Text="$(SolutionDir).nuget\nuget pack $(SolutionDir)\NuSpec\SIL.ExCSS.nuspec -Version $(ExCSSSemVer)" Importance="high" />
   </Target>
 </Project>
