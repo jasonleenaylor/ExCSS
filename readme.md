@@ -38,3 +38,12 @@ fully queryable using Linq to objects.
 
 The project has a growing suite of tests.  Currently the tests account for and pass all CSS Level 3 selector definitions
 found in [the W3 CSS 3 Release Candidate documentation](http://www.w3.org/TR/2001/CR-css3-selectors-20011113/)
+
+
+## Building and releasing
+
+    dotnet build ExCSS.sln -c Release
+    dotnet test ExCSS.sln -c Release
+
+The package is published to NuGet as `SIL.ExCSS`. To release, set `<Version>` in `ExCSS/ExCSS.csproj`, merge to
+`master`, and push a tag named `v<Version>` (for example `v2.1.0`). The `build-test` workflow publishes tagged builds.
