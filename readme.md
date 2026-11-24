@@ -1,4 +1,4 @@
-# ExCSS StyleSheet Parser for .NET - It's _BADA55!_
+# ExCSS StyleSheet Parser for .NET
 
 ExCSS (Pronoundec Excess) is a CSS 2.1 and CSS 3 parser for .NET.
 
